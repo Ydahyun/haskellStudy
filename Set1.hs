@@ -101,7 +101,7 @@ postagePrice weight
 -- Use pattern matching! Don't use comparisons!
 --
 -- Ps. remember, the type of booleans in haskell is Bool
-
+isZero :: Integer -> Bool
 isZero 0 = True
 isZero _ = False
 
