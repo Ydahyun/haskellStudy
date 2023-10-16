@@ -142,5 +142,5 @@ ilog3 :: Integer -> Integer
 ilog3 0 = 0
 ilog3 n 
     | n < 3     = 1
-    | otherwise = 1 + ilog3 (n 'div' 3)
+    | otherwise = 1 + ilog3 (n `div` 3)
 
