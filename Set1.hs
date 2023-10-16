@@ -55,7 +55,7 @@ quadruple x = double (double x)
 --   distance 0 0 1 1  ==>  1.4142135...
 --   distance 1 1 4 5  ==>  5.0
 
-distance :: Double -> Double -> Double -> Double
+distance :: Double -> Double -> Double -> Double -> Double
 distance x1 y1 x2 y2 = sqrt((x2-x1)**2 + (y2-y1)**2)
 
 ------------------------------------------------------------------------------
