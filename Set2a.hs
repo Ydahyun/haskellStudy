@@ -173,8 +173,12 @@ safeIndex xs i
 --   eitherDiv 4 2   ==> Right 2
 --   eitherDiv 4 0   ==> Left "4/0"
 
-eitherDiv :: Integer -> Integer -> Either String Integer
-eitherDiv x y = todo
+-- eitherDiv :: Integer -> Integer -> Either String Integer
+-- eitherDiv x y = todo
+
+eitherDiv :: Integer -> Integer -> Either String Int
+eitherDiv _ 0 = Left "division by zero"
+eitherDiv x y = Right (x `div` y)
 
 ------------------------------------------------------------------------------
 -- Ex 11: implement the function addEithers, which combines two values of type
