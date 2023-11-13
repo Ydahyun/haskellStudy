@@ -85,8 +85,10 @@ substring i j s = take (j - i) $ drop i s
 --   isPalindrome "racecar"  ==>  True
 --   isPalindrome "AB"       ==>  False
 
-isPalindrome :: String -> Bool
-isPalindrome str = todo
+-- isPalindrome :: String -> Bool
+-- isPalindrome str = todo
+isPalindrome :: Eq a => [a] -> Bool
+isPalindrome s = s == reverse s
 
 ------------------------------------------------------------------------------
 -- Ex 6: implement the function palindromify that chops a character
