@@ -199,4 +199,4 @@ addEithers (Right a) (Right b) = Right (a + b)
 addEithers (Left a) _ = Left a
 addEithers _ (Left b) = Left b
 
-Complete Set2a.hs
+-- Complete Set2a.hs
