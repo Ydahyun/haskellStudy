@@ -198,3 +198,5 @@ addEithers :: Either String Int -> Either String Int -> Either String Int
 addEithers (Right a) (Right b) = Right (a + b)
 addEithers (Left a) _ = Left a
 addEithers _ (Left b) = Left b
+
+Complete Set2a.hs
