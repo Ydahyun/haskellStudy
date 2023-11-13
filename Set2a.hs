@@ -176,7 +176,7 @@ safeIndex xs i
 -- eitherDiv :: Integer -> Integer -> Either String Integer
 -- eitherDiv x y = todo
 
-eitherDiv :: Integer -> Integer -> Either String Int
+eitherDiv :: Integer -> Integer -> Either String Integer
 eitherDiv _ 0 = Left "division by zero"
 eitherDiv x y = Right (x `div` y)
 
