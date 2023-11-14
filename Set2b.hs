@@ -185,3 +185,5 @@ biggestPrimeAtMost n
   | n < 2     = error "Invalid input"
   | isPrime n = n
   | otherwise = biggestPrimeAtMost (n - 1)
+
+  -- Complete Set2b.hs
