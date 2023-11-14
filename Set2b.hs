@@ -140,8 +140,15 @@ countdownHelper n = show n ++ "... " ++ countdownHelper (n - 1)
 --
 -- Hint: remember the mod function!
 
+-- smallestDivisor :: Integer -> Integer
+-- smallestDivisor = todo
 smallestDivisor :: Integer -> Integer
-smallestDivisor = todo
+smallestDivisor n = helper 2
+  where
+    helper d
+      | d * d > n      = n
+      | n `mod` d == 0 = d
+      | otherwise      = helper (d + 1)
 
 ------------------------------------------------------------------------------
 -- Ex 7: implement a function isPrime that checks if the given number
