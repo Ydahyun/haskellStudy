@@ -177,5 +177,11 @@ isPrime n
 --   biggestPrimeAtMost 3 ==> 3
 --   biggestPrimeAtMost 10 ==> 7
 
+-- biggestPrimeAtMost :: Integer -> Integer
+-- biggestPrimeAtMost = todo
+
 biggestPrimeAtMost :: Integer -> Integer
-biggestPrimeAtMost = todo
+biggestPrimeAtMost n
+  | n < 2     = error "Invalid input"
+  | isPrime n = n
+  | otherwise = biggestPrimeAtMost (n - 1)
