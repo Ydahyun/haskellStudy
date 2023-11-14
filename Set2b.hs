@@ -37,6 +37,7 @@ binomial n k
 
 oddFactorial :: Integer -> Integer
 oddFactorial 0 = 1
+oddFactorial 1 = 1
 oddFactorial n
     | odd n     = n * oddFactorial (n - 2)
     | otherwise = oddFactorial (n - 1)
