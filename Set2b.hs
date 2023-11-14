@@ -96,8 +96,12 @@ myGcd a b
 -- * you can combine strings with the ++ operator.
 -- * you can compute the length of a string with the length function
 
+-- leftpad :: String -> Int -> String
+-- leftpad = todo
 leftpad :: String -> Int -> String
-leftpad = todo
+leftpad str len
+    | length str < len = replicate (len - length str) ' ' ++ str
+    | otherwise        = str
 
 ------------------------------------------------------------------------------
 -- Ex 5: let's make a countdown for a rocket! Given a number, you
