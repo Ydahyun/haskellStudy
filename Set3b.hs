@@ -142,8 +142,13 @@ sorted (x:y:xs) = x <= y && sorted (y:xs)
 --
 -- Use pattern matching and recursion (and the list constructors : and [])
 
+-- sumsOf :: [Int] -> [Int]
+-- sumsOf xs = todo
 sumsOf :: [Int] -> [Int]
-sumsOf xs = todo
+sumsOf = helper 0
+  where
+    helper _ []     = []
+    helper acc (x:xs) = (acc + x) : helper (acc + x) xs
 
 ------------------------------------------------------------------------------
 -- Ex 7: implement the function merge that merges two sorted lists of
