@@ -346,5 +346,16 @@ multiApp f gs x = f (map ($ x) gs)
 -- using (:). If you build the list in an argument to a helper
 -- function, the surprise won't work. See section 3.8 in the material.
 
+-- interpreter :: [String] -> [String]
+-- interpreter commands = todo
 interpreter :: [String] -> [String]
-interpreter commands = todo
+interpreter = snd . foldl processCommand ((0,0), [])
+  where
+    processCommand ((x, y), output) command = case command of
+      "up"     -> ((x, y+1), output)
+      "down"   -> ((x, y-1), output)
+      "left"   -> ((x-1, y), output)
+      "right"  -> ((x+1, y), output)
+      "printX" -> ((x, y), output ++ [show x])
+      "printY" -> ((x, y), output ++ [show y])
+      _        -> ((x, y), output)
