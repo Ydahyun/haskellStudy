@@ -263,8 +263,12 @@ joinToLength len strs = [x ++ y | x <- strs, y <- strs, length (x ++ y) == len]
 --   sumRights [Right 1, Left "bad value", Right 2]  ==>  3
 --   sumRights [Left "bad!", Left "missing"]         ==>  0
 
+-- sumRights :: [Either a Int] -> Int
+-- sumRights = todo
+
 sumRights :: [Either a Int] -> Int
-sumRights = todo
+sumRights xs = sum $ map (either (const 0) id) xs
+
 
 ------------------------------------------------------------------------------
 -- Ex 12: recall the binary function composition operation
