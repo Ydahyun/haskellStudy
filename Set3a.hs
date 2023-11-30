@@ -141,8 +141,11 @@ capitalizeFirst (x:xs) = toUpper x : xs
 --   * k^max > max
 --   * the function takeWhile
 
+-- powers :: Int -> Int -> [Int]
+-- powers k max = todo
+
 powers :: Int -> Int -> [Int]
-powers k max = todo
+powers k max = takeWhile (<= max) [k^x | x <- [0..]]
 
 ------------------------------------------------------------------------------
 -- Ex 7: implement a functional while loop. While should be a function
