@@ -223,8 +223,12 @@ bomb x = Right (x-1)
 --
 -- Hint! This is a great use for list comprehensions
 
+-- joinToLength :: Int -> [String] -> [String]
+-- joinToLength = todo
+
 joinToLength :: Int -> [String] -> [String]
-joinToLength = todo
+joinToLength len strs = [x ++ y | x <- strs, y <- strs, length (x ++ y) == len]
+
 
 ------------------------------------------------------------------------------
 -- Ex 10: implement the operator +|+ that returns a list with the first
@@ -237,6 +241,11 @@ joinToLength = todo
 --   [1,2,3] +|+ [4,5,6]  ==> [1,4]
 --   [] +|+ [True]        ==> [True]
 --   [] +|+ []            ==> []
+(+|+) :: [a] -> [a] -> [a]
+[] +|+ []         = []
+[] +|+ (y:_)      = [y]
+(x:_) +|+ []      = [x]
+(x:_) +|+ (y:_)   = [x, y]
 
 
 ------------------------------------------------------------------------------
